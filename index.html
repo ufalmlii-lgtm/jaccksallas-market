@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b12">
+  <title>Jaccksallas Market</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a class="logo" href="#">JACK<span>CKSALLAS</span></a>
+  <button id="menuBtn" class="menu-btn">☰</button>
+  <nav id="navMenu">
+    <a href="#home">Home</a>
+    <a href="#catalog">Katalog</a>
+    <a href="#about">Tentang</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <span class="tag">WELCOME TO OUR STORE</span>
+      <h1>JACKCKSALLAS<br><span>MARKET</span></h1>
+      <p>Temukan koleksi produk gaming digital dalam satu tempat.</p>
+      <a href="#catalog" class="main-btn">Jelajahi Katalog →</a>
+    </div>
+    <div class="hero-icon">🎮</div>
+  </section>
+
+  <section class="catalog" id="catalog">
+    <div class="section-heading">
+      <span class="tag">OUR COLLECTION</span>
+      <h2>Katalog Produk</h2>
+      <p>Pilih dan jelajahi koleksi kami.</p>
+    </div>
+
+    <input
+      type="search"
+      id="searchInput"
+      placeholder="Cari produk..."
+    >
+
+    <div class="filters">
+      <button class="filter active" data-category="all">Semua</button>
+      <button class="filter" data-category="ml">Mobile Legends</button>
+      <button class="filter" data-category="ff">Free Fire</button>
+      <button class="filter" data-category="other">Lainnya</button>
+    </div>
+
+    <div class="product-grid" id="productGrid">
+      <article class="product-card" data-category="ml">
+        <div class="product-image">⚔️</div>
+        <div class="product-info">
+          <span class="product-type">MOBILE LEGENDS</span>
+          <h3>Koleksi MLBB</h3>
+          <p>Contoh katalog produk Mobile Legends.</p>
+          <button class="detail-btn" data-name="Koleksi MLBB">
+            Lihat Detail
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="ff">
+        <div class="product-image">🔥</div>
+        <div class="product-info">
+          <span class="product-type">FREE FIRE</span>
+          <h3>Koleksi Free Fire</h3>
+          <p>Contoh katalog produk Free Fire.</p>
+          <button class="detail-btn" data-name="Koleksi Free Fire">
+            Lihat Detail
+          </button>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="other">
+        <div class="product-image">🎮</div>
+        <div class="product-info">
+          <span class="product-type">GAMING</span>
+          <h3>Produk Gaming</h3>
+          <p>Contoh koleksi produk digital lainnya.</p>
+          <button class="detail-btn" data-name="Produk Gaming">
+            Lihat Detail
+          </button>
+        </div>
+      </article>
+    </div>
+    <p id="emptyMessage" hidden>Produk tidak ditemukan.</p>
+  </section>
+
+  <section class="about" id="about">
+    <span class="tag">ABOUT US</span>
+    <h2>Tentang Jaccksallas Market</h2>
+    <p>
+      Jaccksallas Market adalah konsep toko digital
+      yang berfokus pada koleksi gaming dan pengalaman
+      belanja yang mudah.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <h3>JACKCKSALLAS MARKET</h3>
+  <p>© 2026 Jaccksallas Market. All rights reserved.</p>
+</footer>
+
+<div id="modal" class="modal" hidden>
+  <div class="modal-content">
+    <button id="closeModal" class="close-btn">✕</button>
+    <h2 id="modalTitle">Detail Produk</h2>
+    <p>Ini merupakan contoh tampilan katalog.
+      Informasi produk akan ditambahkan oleh admin.</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+            </html>
+            
