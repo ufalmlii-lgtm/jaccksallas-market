@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Jaccksallas Market</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .admin-container {
+      max-width: 850px;
+      margin: auto;
+      padding: 35px 6%;
+    }
+    .admin-box {
+      background: #171522;
+      border: 1px solid #38304e;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .admin-box input, .admin-box select,
+    .admin-box textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0 15px;
+      border-radius: 7px;
+      border: 1px solid #38304e;
+      background: #0b0b12;
+      color: white;
+    }
+    .admin-box button {
+      padding: 11px 17px;
+      background: #8055e9;
+      border: none;
+      border-radius: 7px;
+      color: white;
+      cursor: pointer;
+    }
+    .admin-product {
+      border-bottom: 1px solid #38304e;
+      padding: 15px 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+    .admin-actions {
+      display: flex;
+      gap: 7px;
+    }
+    .delete-btn { background: #b83245 !important; }
+    .edit-btn { background: #51418b !important; }
+  </style>
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">JACK<span>CKSALLAS</span></a>
+  <a href="index.html" style="color:white;text-decoration:none">
+    Kembali ke toko
+  </a>
+</header>
+
+<main class="admin-container">
+  <span class="tag">STORE MANAGEMENT</span>
+  <h1>Dashboard Admin</h1>
+  <p style="color:#aaa5b9">Jaccksallas Market</p>
+
+  <div class="admin-box">
+    <h2 id="formTitle">Tambah Produk</h2>
+
+    <form id="productForm">
+      <label>Nama Produk</label>
+      <input id="name" required placeholder="Nama produk">
+
+      <label>Kategori</label>
+      <select id="category">
+        <option value="ml">Mobile Legends</option>
+        <option value="ff">Free Fire</option>
+        <option value="other">Lainnya</option>
+      </select>
+
+      <label>Harga (Rupiah)</label>
+      <input id="price" type="number" min="0"
+        required placeholder="Contoh: 100000">
+
+      <label>Deskripsi</label>
+      <textarea id="description" required
+        placeholder="Deskripsi produk"></textarea>
+
+      <button type="submit" id="saveBtn">
+        Simpan Produk
+      </button>
+      <button type="button" id="cancelBtn"
+        style="display:none;background:#555">
+        Batal
+      </button>
+    </form>
+  </div>
+
+  <div class="admin-box">
+    <h2>Daftar Produk</h2>
+    <p id="totalProducts" style="color:#aaa5b9"></p>
+    <div id="productList"></div>
+  </div>
+</main>
+
+<script src="admin.js"></script>
+</body>
+</html>
+  
